@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# SitWell runtime artifacts (regenerated on first run)
+posture_config.json
+_chime_nudge.wav
+_chime_good.wav
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
