@@ -588,8 +588,10 @@ class App(ctk.CTk):
                 # Just recovered.
                 self.slouch_since = None
                 self.good_streak_start = now
-                if self.engine.sound_enabled:
-                    sound.play_good()
+                # Recovery chime disabled: it had no hold/cooldown guard, so it
+                # spammed on every micro-slouch flicker near the threshold.
+                # if self.engine.sound_enabled:
+                #     sound.play_good()
             self.upright_sec += dt
             self._cur_state = "good"
             mins = (now - self.good_streak_start) / 60.0
